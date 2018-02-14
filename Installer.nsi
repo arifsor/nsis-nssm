@@ -116,7 +116,7 @@ Section /o -un.Main UNSEC0000
     DeleteRegValue HKLM "${REGKEY}\Components" Main
 SectionEnd
 
-Section -un.LedgerMaxService UNSEC0001
+Section -un.MyappService UNSEC0001
     nsExec::Exec '"$SYSDIR\nssm.exe" stop "${SERVICE_NAME}"'
     nsExec::Exec '"$SYSDIR\nssm.exe" remove "${SERVICE_NAME}" confirm'
 SectionEnd
